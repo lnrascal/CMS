@@ -38,12 +38,14 @@ public class CatalogItem : SerializedScriptableObject
         Category = category;
         AddressablePath = addressablePath;
     }
+    
 }
 
 public enum ItemCategory
 {
     EngineBay,
     Transmission,
+    Exhaust,
     Exterior,
     Interior,
     Wheel

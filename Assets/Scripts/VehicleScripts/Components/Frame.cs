@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Frame : Detail
 {
-    public override int InstalledNode { get; set; } = -1;
+    public override int InstalledNode { get; set; } = 0;
     public override bool IsInstalled { get; } = true;
     public override bool IsUninstallable { get; } = false;
 

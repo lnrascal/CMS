@@ -1,0 +1,249 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Mustang
+  m_EditorClassIdentifier: 
+  m_GroupName: Mustang
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 815a0509a06492547b205ceb9198874a
+  m_SerializeEntries:
+  - m_GUID: c9153ecad6869b84c83127e820361edb
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/front_axle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6dc326f772f29104593da6b91b16b850
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/cylinder_block.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78475081ecf994543a347b31b7c652e8
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/left_cylinder_block_head.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a20102fc8b8ca6d46a4b8a07a9dd4f1c
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/left_cylinder_block_head_cover.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92c10e8c117e48d428014cd35f51b0fa
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/intake_manifold.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e574c85f253fd5f448a8b5cf0ec0947c
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/right_turbine.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1df09a6350bf31429b834794d3647bc
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/air_filter.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3101f104b72eabc4f90a60a714f8101c
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/right_cylinder_block_head.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1affde3c898e56343b79d2493ae6b393
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/right_cylinder_block_head_cover.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 218778ed3d48bac4ba0c02287d1c623b
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/alternator.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a8495c1fe39ff44195281eed940314b
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/timing_belt.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24f837a2f5340024b98226bf9701b668
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/Flywheel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1136ae5ed2177d44ea63dfc0b9a2a6fe
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/gearbox.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad4121a70a39d6448b002386b214610a
+    m_Address: Assets/Cars/Mustang/Prefabs/EngineBay/control_unit_box.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bee65ccf312d054481b237215e14aaf
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/left_bottom_suspension_arm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e94357905855ea24e967773ab277e4dc
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/left_upper_suspension_arm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 369ecce40a86f764f8680e71a7f38d41
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/front_left_steering_knuckle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 882b94feebc1ea045ad9710641b4dca3
+    m_Address: Assets/Cars/Mustang/Prefabs/Wheel/rim.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14108eb5a9ad6a2489c433bc2779fb6f
+    m_Address: Assets/Cars/Mustang/Prefabs/Wheel/tyre.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9e4dbd4aee98b5429bc4c6ea89f0ed4
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/right_bottom_suspension_arm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b26202c8fa062fe4fa164e9d5dc074d2
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/right_upper_suspension_arm.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78299498b8a180243a294d185e055c46
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/front_right_shock_absorber.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24e1643da0e871b40bdca87adca9aebc
+    m_Address: Assets/Cars/Mustang/Prefabs/Exhaust/exhaust_pipes.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d64468a6e653424495a14bf9403aaf6
+    m_Address: Assets/Cars/Mustang/Prefabs/Exhaust/rear_right_silencer_v2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3db4162571ac4be4d9e2ec5e898cabff
+    m_Address: Assets/Cars/Mustang/Prefabs/Exhaust/rear_left_silencer_v2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7201c1a48d0b0b46819c5156203ecc7
+    m_Address: Assets/Cars/Mustang/Prefabs/Exhaust/front_right_silencer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 945bc05bc98fd3c468b8f8705551570b
+    m_Address: Assets/Cars/Mustang/Prefabs/Exhaust/front_left_silencer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9d63ca5055f38740b2b65e3930b497c
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/rear_axle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 382b6dbf6a8e8b54bb382824e841f66d
+    m_Address: Assets/Cars/Mustang/Prefabs/Transmission/rear_left_knuckle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9de7a872adac9bc48a742ce9d379fbf2
+    m_Address: Assets/Cars/Mustang/Prefabs/Interior/dashboard.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c268f0b0af49a0458474573dcce2a0a
+    m_Address: Assets/Cars/Mustang/Prefabs/Interior/steering_wheel_v2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a02028a1518dad4685da3664541cc7f
+    m_Address: Assets/Cars/Mustang/Prefabs/Interior/rear_seats.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 03351b37dc9d1f546a60571d3a90ac5d
+    m_Address: Assets/Cars/Mustang/Prefabs/Interior/seat_driver.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78279d5c84db2cd4aa6e176c5fe64bde
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/left_door.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab01677f392f4e145937e1fe3fa50d45
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/left_door_window.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d606cdfc0be16f840b624b2e6885e917
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/right_door.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3b0d2cde50f836408f5c15c490c2bf4
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/right_door_window.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5fda1e49cd42d0d43852d2c453ea4ade
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/hoods_shelby_v3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7858919c82c6f374eae6d47f84ae5f0e
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/trunk_lid.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 441869bb743b1a340b116c899cf29785
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/spoiler_v1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c517a185399f51468687ecf9aedd257
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/rear_glass_window.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e6005c374edef0419b513e3f99eccac
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/windshield_window.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 152049fd71b4a7b49ba2733a42f7442a
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/front_bumper_v1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52bf7483bff032144b6c4837bf415bcb
+    m_Address: Assets/Cars/Mustang/Prefabs/Exterior/rear_bumper_v1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b1ee080044529b40b128ed39938cea9
+    m_Address: Assets/Cars/Mustang/Mustang.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 40fe5eea499e6d74c805fc4c508a7279, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9db0a315d6c54f049bccf338e31cca04, type: 2}

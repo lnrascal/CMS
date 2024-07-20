@@ -57,7 +57,7 @@ namespace EPOOutline
         private static List<TargetStateListener> tempListeners = new List<TargetStateListener>();
         
         private static HashSet<Outlinable> outlinables = new HashSet<Outlinable>();
-
+        
         [System.Serializable]
         public class OutlineProperties
         {
@@ -169,7 +169,11 @@ namespace EPOOutline
         private bool shouldValidateTargets = false;
         
 #pragma warning restore CS0649
-
+        
+        public void SetOutlineParameters(OutlineProperties properties)
+        {
+            outlineParameters = properties;
+        }
         public RenderStyle RenderStyle
         {
             get

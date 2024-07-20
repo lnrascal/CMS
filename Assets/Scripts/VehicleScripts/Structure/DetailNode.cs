@@ -16,7 +16,9 @@ public class DetailNode: SerializedScriptableObject
     [field: SerializeField]
     public int ParentKey { get; private set; }
     
+    [field:SerializeField]
     public List<int> Children { get; private set; } = new();
+    [field:SerializeField]
     public HashSet<int> Items { get; private set; } = new();
     
     [field: SerializeField] public Vector3 Position { get; set; }

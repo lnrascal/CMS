@@ -17,14 +17,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Detail
   - InHandItem
   - One Way Platform
-  - 
-  - 
+  - IInteractable
+  - Player
   - 
   - 
   - 

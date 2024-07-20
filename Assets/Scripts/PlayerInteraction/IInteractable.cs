@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void Interact(GameObject player);
+    void Interact(PlayerInteract player);
 
     void Highlight(bool toHighlight);
 

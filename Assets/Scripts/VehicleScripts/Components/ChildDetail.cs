@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using EPOOutline;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 public class ChildDetail : Detail, IInteractable
 {
+    [field: SerializeField]
     public override int InstalledNode { get; set; }
     [SerializeField] protected Outlinable outlinable;
 
@@ -12,9 +14,8 @@ public class ChildDetail : Detail, IInteractable
     {
         get
         {
-            if (transform.childCount > 0 || transform.GetComponentInParent<Vehicle>() == null)
+            if (InstalledNode == -1) 
             {
-                Debug.Log("Detail is not installed to vehicle OR Child Details should be removed first");
                 return false;
             }
 
@@ -45,9 +46,9 @@ public class ChildDetail : Detail, IInteractable
     }
 #endif
 
-    public void Interact(GameObject player)
+    public void Interact(PlayerInteract player)
     {
-        throw new System.NotImplementedException();
+        PickUp(player);
     }
 
     public void Highlight(bool toHighlight)
@@ -55,20 +56,59 @@ public class ChildDetail : Detail, IInteractable
         outlinable.enabled = toHighlight;
     }
 
-    public void PickUp(GameObject player)
+    public void PickUp(PlayerInteract player)
     {
+        if (transform.childCount > 0)
+            return;
+
+        if (IsInstalled)
+        {
+            Vehicle vehicle = GetComponentInParent<Vehicle>();
+            if(vehicle != null)
+                vehicle.UninstallDetail(InstalledNode);
+        }
+        
+        Garage.Instance.CreateHints(this);
         InstalledNode = -1;
         gameObject.layer = LayerMask.NameToLayer("InHandItem");
+        rb.isKinematic = true;
+        cld.enabled = false;
+        
+        player.Pickup(gameObject);
     }
 
     public void Drop()
     {
         gameObject.layer = LayerMask.NameToLayer("Detail");
         rb.isKinematic = false;
+        cld.enabled = true;
+        
         if (cld is MeshCollider)
         {
             ((MeshCollider)cld).convex = true;
             transform.SetParent(null);
         }
+        
+        Garage.Instance.RemoveHints();
+    }
+    
+    public virtual HintComponent CreateHint()
+    {
+        GameObject copy = Instantiate(gameObject);
+
+        ChildDetail copyDetailComponent = copy.GetComponent<ChildDetail>();
+        Outlinable outline = copyDetailComponent.GetOutline();
+        outline.enabled = true;
+        HintComponent hint = copy.AddComponent<HintComponent>();
+        hint.SetFields(copyDetailComponent.ItemID, outline);
+        
+        Destroy(copyDetailComponent);
+
+        return hint;
+    }
+
+    public Outlinable GetOutline()
+    {
+        return outlinable;
     }
 }

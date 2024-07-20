@@ -7,30 +7,52 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [CreateAssetMenu(menuName = "CMS/Vehicle Structure")]
-public class VehicleStructure: SerializedScriptableObject
+public class VehicleStructure : SerializedScriptableObject
 {
-    [field:SerializeField]
-    public string VehicleName { get; private set; }
-    [SerializeField]
-    private List<DetailNode> nodes = new();
-    
+    [field: SerializeField] public string VehicleName { get; private set; }
+
+    [SerializeField] private List<DetailNode> nodes = new();
+
+    [SerializeField] private Dictionary<int, List<int>> itemToNodes = new();
+
 #if UNITY_EDITOR
-    
+
     private void Init(string vehicleName)
     {
         VehicleName = vehicleName;
         nodes = new();
     }
 
+    public int NodeCount()
+    {
+        return nodes.Count;
+    }
     public int AddNode(int parentKey, string detailName, Vector3 position, Vector3 rotation)
     {
         int nodeKey = nodes.Count;
         DetailNode detailNode = DetailNode.Create(nodeKey, parentKey, detailName, VehicleName, position, rotation);
         nodes.Add(detailNode);
-        
-        nodes[parentKey].AddChild(nodeKey);
-        
+
+        if (parentKey >= 0)
+            nodes[parentKey].AddChild(nodeKey);
+
         return nodeKey;
+    }
+
+    public void AddItemToNode(int nodeId, int itemId)
+    {
+        nodes[nodeId].AddItem(itemId);
+
+        if (!itemToNodes.ContainsKey(itemId))
+        {
+            List<int> nodes = new();
+            nodes.Add(nodeId);
+            itemToNodes.Add(itemId, nodes);
+        }
+        else
+        {
+            itemToNodes[itemId].Add(nodeId);
+        }
     }
 
     public static VehicleStructure Create(string vehicleName)
@@ -39,8 +61,8 @@ public class VehicleStructure: SerializedScriptableObject
 
         vehicle.Init(vehicleName);
 
-        string path = "Assets/Cars/" + vehicleName + ".asset";
-
+        string path = "Assets/Cars/" + vehicleName + "/" + vehicleName + ".asset";
+        
         AssetDatabase.CreateAsset(vehicle, path);
         AssetDatabase.SaveAssets();
 
@@ -48,7 +70,7 @@ public class VehicleStructure: SerializedScriptableObject
 
         return vehicle;
     }
-    #endif
+#endif
 
     public DetailNode GetNode(int key)
     {
@@ -56,16 +78,16 @@ public class VehicleStructure: SerializedScriptableObject
         {
             throw new ArgumentOutOfRangeException("No such node");
         }
-        
+
         return nodes[key];
     }
 
-    public bool IsItemInstallable(int nodeKey, int itemId)
+    public List<int> GetNodesByItem(int itemId)
     {
-        DetailNode detailNode = GetNode(nodeKey);
+        List<int> nodesWithItem = new();
+        if(itemToNodes.TryGetValue(itemId, out var node))
+            nodesWithItem.AddRange(node);
 
-        return detailNode.ContainsItem(itemId);
+        return nodesWithItem;
     }
-    
-    
 }

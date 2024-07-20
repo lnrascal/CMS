@@ -1,0 +1,1072 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b537e0b2201ba44bd05b79f13b9488, type: 3}
+  m_Name: New Catalog
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 6eb07f0131523d148bbd2522754e2691, type: 2}
+    - {fileID: 11400000, guid: 28bc6df890d38584884d05239107e770, type: 2}
+    - {fileID: 11400000, guid: 03921f7065c5565458bf44e0e2487918, type: 2}
+    - {fileID: 11400000, guid: cf93cee4acd5ce1479cab0f00db4f8ab, type: 2}
+    - {fileID: 11400000, guid: a36c935e7c15846439e5b77cc81178af, type: 2}
+    - {fileID: 11400000, guid: 6e3fcd33d1a48e14ba9a1edf40a72092, type: 2}
+    - {fileID: 11400000, guid: 386be8481388b9941a7f45df9a1678b4, type: 2}
+    - {fileID: 11400000, guid: a939f5392891e3d49a3c2b81af58ea88, type: 2}
+    - {fileID: 11400000, guid: ab5a5b4e2092df84792e9fd6696d46c9, type: 2}
+    - {fileID: 11400000, guid: d988d1f9891da04469a532542a7b3363, type: 2}
+    - {fileID: 11400000, guid: 6f5a3a4eeee298b45b3ae11453079e89, type: 2}
+    - {fileID: 11400000, guid: 31fe9df27f448f243b95ecde605dd470, type: 2}
+    - {fileID: 11400000, guid: f0ed880f93c804040b9f61081ed0fa68, type: 2}
+    - {fileID: 11400000, guid: 7762ae30ac0b65a4bac49f870f5b39bf, type: 2}
+    - {fileID: 11400000, guid: 0fcd09dd021f78940a2e3f4e8613e657, type: 2}
+    - {fileID: 11400000, guid: e8260fd14eff7d64d986ac51d7338f67, type: 2}
+    - {fileID: 11400000, guid: 13bfc4ce695daac4aada24e2ff32ffae, type: 2}
+    - {fileID: 11400000, guid: af47c43fca55bc74ab1941200e68bfdb, type: 2}
+    - {fileID: 11400000, guid: 4ff263cbd5abbe741b6db0f47799316f, type: 2}
+    - {fileID: 11400000, guid: 625fc4e38abb6b541bfda12356b1f996, type: 2}
+    - {fileID: 11400000, guid: bd9c2464efeb4464d8724df7a5d1652e, type: 2}
+    - {fileID: 11400000, guid: 973cc61c5b1218941865aab7cfdbc3f9, type: 2}
+    - {fileID: 11400000, guid: 20292b7b39c878d41ac96bc7ad13ed5a, type: 2}
+    - {fileID: 11400000, guid: 38d0cd20635481d4cbf2f7cfd5942226, type: 2}
+    - {fileID: 11400000, guid: 2bf5880a6a4d848478f319d833ccef5b, type: 2}
+    - {fileID: 11400000, guid: 22d30e6cb2fde9140a10d7ccd464ac74, type: 2}
+    - {fileID: 11400000, guid: a3823bb9c835de54fa4f5cb2e33f28fe, type: 2}
+    - {fileID: 11400000, guid: 9d06bd3f1819a824395c90a6e3b7c17c, type: 2}
+    - {fileID: 11400000, guid: 0e42a42be91792f44817368a94fc47cd, type: 2}
+    - {fileID: 11400000, guid: 7f5c2cf14523a2541a146eb85fbdabb6, type: 2}
+    - {fileID: 11400000, guid: 6518db04f3df7414ea01930af98e6217, type: 2}
+    - {fileID: 11400000, guid: 8b212b52671f7f645bb17308ea628d55, type: 2}
+    - {fileID: 11400000, guid: 1c89b5bb803378a48bca8b8d2feb0a82, type: 2}
+    - {fileID: 11400000, guid: f7e13e3e33f060d41ad7103ba3d99fc5, type: 2}
+    - {fileID: 11400000, guid: 7444f75c39516e04d9182416a1113283, type: 2}
+    - {fileID: 11400000, guid: e6996ebcc18cc4e42a0588e89a7fd65e, type: 2}
+    - {fileID: 11400000, guid: 476d9765a31bee54cb113bb4d1ad0b1e, type: 2}
+    - {fileID: 11400000, guid: 2091dd4c41053964ea20f42ba5485dbb, type: 2}
+    - {fileID: 11400000, guid: eed2b8e52fbfb93438bf7ff497354667, type: 2}
+    - {fileID: 11400000, guid: eb7e9a406f8eb2144b2c53224600b380, type: 2}
+    - {fileID: 11400000, guid: 84697f4382d8a454196d7453783d84c1, type: 2}
+    - {fileID: 11400000, guid: acf6c09dfcc80a0449afb921e111159c, type: 2}
+    - {fileID: 11400000, guid: 24f7c972deac55a43b032a5265e926d4, type: 2}
+    - {fileID: 11400000, guid: cb4bcebada73d3445bee62ba63887abb, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _catalogItems
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[CatalogItem,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 44
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 9
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 11
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 12
+    - Name: $v
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 13
+    - Name: $v
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 14
+    - Name: $v
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 15
+    - Name: $v
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 16
+    - Name: $v
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 17
+    - Name: $v
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 18
+    - Name: $v
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 19
+    - Name: $v
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 20
+    - Name: $v
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 21
+    - Name: $v
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 22
+    - Name: $v
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 23
+    - Name: $v
+      Entry: 10
+      Data: 23
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 24
+    - Name: $v
+      Entry: 10
+      Data: 24
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 25
+    - Name: $v
+      Entry: 10
+      Data: 25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 26
+    - Name: $v
+      Entry: 10
+      Data: 26
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 27
+    - Name: $v
+      Entry: 10
+      Data: 27
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 28
+    - Name: $v
+      Entry: 10
+      Data: 28
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 29
+    - Name: $v
+      Entry: 10
+      Data: 29
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 30
+    - Name: $v
+      Entry: 10
+      Data: 30
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 31
+    - Name: $v
+      Entry: 10
+      Data: 31
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 32
+    - Name: $v
+      Entry: 10
+      Data: 32
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 33
+    - Name: $v
+      Entry: 10
+      Data: 33
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 34
+    - Name: $v
+      Entry: 10
+      Data: 34
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 35
+    - Name: $v
+      Entry: 10
+      Data: 35
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 36
+    - Name: $v
+      Entry: 10
+      Data: 36
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 37
+    - Name: $v
+      Entry: 10
+      Data: 37
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 38
+    - Name: $v
+      Entry: 10
+      Data: 38
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 39
+    - Name: $v
+      Entry: 10
+      Data: 39
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 40
+    - Name: $v
+      Entry: 10
+      Data: 40
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 41
+    - Name: $v
+      Entry: 10
+      Data: 41
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 42
+    - Name: $v
+      Entry: 10
+      Data: 42
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 43
+    - Name: $v
+      Entry: 10
+      Data: 43
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: itemsByVehicle
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.HashSet`1[[System.Int32,
+        mscorlib]], System.Core]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Mustang
+    - Name: $v
+      Entry: 7
+      Data: 4|System.Collections.Generic.HashSet`1[[System.Int32, mscorlib]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 44
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 11
+    - Name: 
+      Entry: 3
+      Data: 12
+    - Name: 
+      Entry: 3
+      Data: 13
+    - Name: 
+      Entry: 3
+      Data: 14
+    - Name: 
+      Entry: 3
+      Data: 15
+    - Name: 
+      Entry: 3
+      Data: 16
+    - Name: 
+      Entry: 3
+      Data: 17
+    - Name: 
+      Entry: 3
+      Data: 18
+    - Name: 
+      Entry: 3
+      Data: 19
+    - Name: 
+      Entry: 3
+      Data: 20
+    - Name: 
+      Entry: 3
+      Data: 21
+    - Name: 
+      Entry: 3
+      Data: 22
+    - Name: 
+      Entry: 3
+      Data: 23
+    - Name: 
+      Entry: 3
+      Data: 24
+    - Name: 
+      Entry: 3
+      Data: 25
+    - Name: 
+      Entry: 3
+      Data: 26
+    - Name: 
+      Entry: 3
+      Data: 27
+    - Name: 
+      Entry: 3
+      Data: 28
+    - Name: 
+      Entry: 3
+      Data: 29
+    - Name: 
+      Entry: 3
+      Data: 30
+    - Name: 
+      Entry: 3
+      Data: 31
+    - Name: 
+      Entry: 3
+      Data: 32
+    - Name: 
+      Entry: 3
+      Data: 33
+    - Name: 
+      Entry: 3
+      Data: 34
+    - Name: 
+      Entry: 3
+      Data: 35
+    - Name: 
+      Entry: 3
+      Data: 36
+    - Name: 
+      Entry: 3
+      Data: 37
+    - Name: 
+      Entry: 3
+      Data: 38
+    - Name: 
+      Entry: 3
+      Data: 39
+    - Name: 
+      Entry: 3
+      Data: 40
+    - Name: 
+      Entry: 3
+      Data: 41
+    - Name: 
+      Entry: 3
+      Data: 42
+    - Name: 
+      Entry: 3
+      Data: 43
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: itemsByCategory
+      Entry: 7
+      Data: 5|System.Collections.Generic.Dictionary`2[[ItemCategory, Assembly-CSharp],[System.Collections.Generic.HashSet`1[[System.Int32,
+        mscorlib]], System.Core]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 6|System.Collections.Generic.EnumEqualityComparer`1[[ItemCategory, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 7|System.Collections.Generic.HashSet`1[[System.Int32, mscorlib]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 12
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 13
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 8|System.Collections.Generic.HashSet`1[[System.Int32, mscorlib]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 11
+    - Name: 
+      Entry: 3
+      Data: 12
+    - Name: 
+      Entry: 3
+      Data: 14
+    - Name: 
+      Entry: 3
+      Data: 15
+    - Name: 
+      Entry: 3
+      Data: 16
+    - Name: 
+      Entry: 3
+      Data: 19
+    - Name: 
+      Entry: 3
+      Data: 20
+    - Name: 
+      Entry: 3
+      Data: 21
+    - Name: 
+      Entry: 3
+      Data: 27
+    - Name: 
+      Entry: 3
+      Data: 28
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: 9|System.Collections.Generic.HashSet`1[[System.Int32, mscorlib]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 17
+    - Name: 
+      Entry: 3
+      Data: 18
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 10|System.Collections.Generic.HashSet`1[[System.Int32, mscorlib]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 22
+    - Name: 
+      Entry: 3
+      Data: 23
+    - Name: 
+      Entry: 3
+      Data: 24
+    - Name: 
+      Entry: 3
+      Data: 25
+    - Name: 
+      Entry: 3
+      Data: 26
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 11|System.Collections.Generic.HashSet`1[[System.Int32, mscorlib]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 29
+    - Name: 
+      Entry: 3
+      Data: 30
+    - Name: 
+      Entry: 3
+      Data: 31
+    - Name: 
+      Entry: 3
+      Data: 32
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 12|System.Collections.Generic.HashSet`1[[System.Int32, mscorlib]], System.Core
+    - Name: 
+      Entry: 12
+      Data: 11
+    - Name: 
+      Entry: 3
+      Data: 33
+    - Name: 
+      Entry: 3
+      Data: 34
+    - Name: 
+      Entry: 3
+      Data: 35
+    - Name: 
+      Entry: 3
+      Data: 36
+    - Name: 
+      Entry: 3
+      Data: 37
+    - Name: 
+      Entry: 3
+      Data: 38
+    - Name: 
+      Entry: 3
+      Data: 39
+    - Name: 
+      Entry: 3
+      Data: 40
+    - Name: 
+      Entry: 3
+      Data: 41
+    - Name: 
+      Entry: 3
+      Data: 42
+    - Name: 
+      Entry: 3
+      Data: 43
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

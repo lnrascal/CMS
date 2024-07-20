@@ -9,7 +9,16 @@ public abstract class Detail : MonoBehaviour
     
     public abstract int InstalledNode { get; set; }
 
-    public abstract bool IsInstalled { get; }
+    public virtual bool IsInstalled
+    {
+        get
+        {
+            if (InstalledNode == -1)
+                return false;
+
+            return true;
+        }
+    }
 
     public abstract bool IsUninstallable { get; }
     
@@ -37,6 +46,10 @@ public abstract class Detail : MonoBehaviour
     public virtual void SetInstalledNode(int installedNode)
     {
         InstalledNode = installedNode;
+        rb.isKinematic = true;
+
+        if (cld is MeshCollider)
+            ((MeshCollider)cld).convex = false;
     }
 
     public void SetItem(int id)
