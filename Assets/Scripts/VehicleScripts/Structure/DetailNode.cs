@@ -1,30 +1,30 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using UnityEditor;
 
 [Serializable]
 public class DetailNode: SerializedScriptableObject
 {
     
-    [field: SerializeField]
-    public int DetailKey { get; private set; }
-    [field: SerializeField]
-    public int ParentKey { get; private set; }
+    [field: SerializeField] public int DetailKey { get; private set; }
+    [field: SerializeField] public int ParentKey { get; private set; }
     
-    [field:SerializeField]
-    public List<int> Children { get; private set; } = new();
-    [field:SerializeField]
-    public HashSet<int> Items { get; private set; } = new();
+    //Contains Children Nodes' Keys
+    [field:SerializeField] public List<int> Children { get; private set; } = new();
     
+    //Contains Item IDs that can be Installed ti this Node
+    [field:SerializeField] public HashSet<int> Items { get; private set; } = new();
+    
+    //Contains Local Position And Rotation Of Installatin
     [field: SerializeField] public Vector3 Position { get; set; }
 
     [field: SerializeField] public Vector3 Rotation { get; set; }
 
+    #if UNITY_EDITOR
+    
+    //Methods Used In VehicleCreator
     private void Init(int detailKey, int parentKey, Vector3 position, Vector3 rotation)
     {
         DetailKey = detailKey;
@@ -51,7 +51,7 @@ public class DetailNode: SerializedScriptableObject
 
         return detaiLNode;
     }
-
+    
     public void AddChild(int childKey)
     {
         if(!Children.Contains(childKey))
@@ -62,6 +62,8 @@ public class DetailNode: SerializedScriptableObject
     {
         Items.Add(id);
     }
+    
+    #endif
     public bool ContainsItem(int id)
     {
         if (Items.Contains(id))

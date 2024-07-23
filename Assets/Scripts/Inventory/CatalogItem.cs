@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,7 +11,10 @@ public class CatalogItem : SerializedScriptableObject
     public ItemCategory Category { get; set; }
 
     [field: SerializeField] public string AddressablePath { get; set; }
-
+    
+    
+    #if UNITY_EDITOR
+    //Creates Its Own Scriptable And Places It In Needed Folder
     public static CatalogItem Create(int id, string itemName, ItemCategory category, string addressablePath, string vehicleName)
     {
         var catalogItem = ScriptableObject.CreateInstance<CatalogItem>();
@@ -39,8 +39,11 @@ public class CatalogItem : SerializedScriptableObject
         AddressablePath = addressablePath;
     }
     
+    #endif
+    
 }
 
+//Enum Containing Categories Of Details
 public enum ItemCategory
 {
     EngineBay,

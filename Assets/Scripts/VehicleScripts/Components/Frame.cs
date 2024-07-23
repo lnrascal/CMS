@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+//Frame Is Not As Much Interactable As Other Details, Thus It Is In Separate Class
 public class Frame : Detail
 {
     public override int InstalledNode { get; set; } = 0;
-    public override bool IsInstalled { get; } = true;
-    public override bool IsUninstallable { get; } = false;
+    public bool IsInstalled { get; } = true;
+    public bool IsUninstallable { get; } = false;
 
     
-    public override bool Remove()
+    public bool Remove()
     {
         return false;
     }

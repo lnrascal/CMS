@@ -1,19 +1,17 @@
 #if UNITY_EDITOR
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.AddressableAssets.Settings.GroupSchemas;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEditor.AddressableAssets;
-using DG.Tweening;
 using EPOOutline;
 
+//Editor Script For Creating Vehicle its prefab, and Detail's Scriptables And Prefabs
 public class VehicleCreator : OdinEditorWindow
 {
     [MenuItem("Tools/Vehicle Creator")]
@@ -21,15 +19,20 @@ public class VehicleCreator : OdinEditorWindow
     {
         GetWindow<VehicleCreator>("Vehicle Creator");
     }
-
+    
+    //Reference To A Catalog Where Information About New Details Will Be Stored
     public Catalog Catalog;
-    [field: SerializeField] public string VehicleName { get; set; }
+    
+    //Name Of A Vehicle
+    public string VehicleName;
+    
+    //Reference To A GameObject From Which New Vehicle Will Be Created
     public GameObject vehicleGo;
 
     //Needed to track same items spread to same nodes
     private Dictionary<string, int> meshNamesToItemId = new();
 
-    [Button]
+    [Button(ButtonSizes.Large)]
     public void CreateHierarchy()
     {
         //Creating Necessary Folders
@@ -61,27 +64,23 @@ public class VehicleCreator : OdinEditorWindow
         
         Vehicle vehicle = frameGo.AddComponent<Vehicle>();
         vehicle.SetStructure(structure);
-
-
+        string localPath = "Assets/Cars/" + VehicleName + "/" + VehicleName + ".prefab";
+        localPath = AssetDatabase.GenerateUniqueAssetPath(localPath);
+        PrefabUtility.SaveAsPrefabAssetAndConnect(frameGo, localPath, InteractionMode.UserAction);
+        AddPrefabToAddressables(localPath, VehicleName);
+        vehicle.PrefabSetup(frameGo.AddComponent<Frame>());
+        
+        DestroyImmediate(frameGo);
         //Creating Details Prefab and Detail Ndoes
         Transform rootTransform = vehicleGo.transform;
         meshNamesToItemId = new();
         AddChildren(structure, rootTransform, 0);
-
-        vehicle.PrefabSetup(frameGo.AddComponent<Frame>());
-
-        string localPath = "Assets/Cars/" + VehicleName + "/" + VehicleName + ".prefab";
-        localPath = AssetDatabase.GenerateUniqueAssetPath(localPath);
-        PrefabUtility.SaveAsPrefabAssetAndConnect(frameGo, localPath, InteractionMode.UserAction);
-
-        AddPrefabToAddressables(localPath, VehicleName);
         
+        //Saving Assets
         EditorUtility.SetDirty(structure);
         EditorUtility.SetDirty(Catalog);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-        
-        DestroyImmediate(frameGo);
     }
 
     private void AddChildren(VehicleStructure vehicleStructure, Transform parentTransform, int parentKey)
@@ -136,7 +135,8 @@ public class VehicleCreator : OdinEditorWindow
     private ItemCategory IdentifyCategory(string objectName)
     {
         ItemCategory category = ItemCategory.EngineBay;
-
+        
+        //Iterating Through Category.ToStrings and Identifying category based on given string objectName
         foreach (ItemCategory ctg in Enum.GetValues(typeof(ItemCategory)))
         {
             if (objectName.Equals(ctg.ToString(), StringComparison.OrdinalIgnoreCase))
@@ -156,14 +156,14 @@ public class VehicleCreator : OdinEditorWindow
 
         DeleteChildren(copyGo.transform);
 
-        //Adding and setting necessary components
+        //Adding necessary components
         copyGo.layer = LayerMask.NameToLayer("Detail");
         MeshCollider mc = copyGo.AddComponent<MeshCollider>();
         Rigidbody rb = copyGo.AddComponent<Rigidbody>();
 
         copyGo.AddComponent<Outlinable>();
 
-        // copyGo.AddComponent<>
+        //Setting Prefabs Components
         mc.convex = true;
         Mesh mesh = child.GetComponent<MeshFilter>().sharedMesh;
         meshNamesToItemId.Add(mesh.name, newItemId);

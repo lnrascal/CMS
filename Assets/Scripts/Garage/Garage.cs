@@ -1,17 +1,19 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using EPOOutline;
 using UnityEngine;
 
 public class Garage : MonoBehaviour
 {
+    //Singleton
     public static Garage Instance;
     
     //Tracks vehicles to create hints for each car
     [SerializeField] private List<Vehicle> vehicles = new();
+    
+    //Tracks each hint to destroy them when needed
     [SerializeField] private List<GameObject> hints = new();
     
+    //Outline Parameters For Hints To Set Them As Static Field
     [SerializeField] private Outlinable.OutlineProperties hintDefaultOutline;
     [SerializeField] private Outlinable.OutlineProperties hintHoverOutline;
     
@@ -34,12 +36,13 @@ public class Garage : MonoBehaviour
     {
         HintComponent hint = detail.CreateHint();
         
+        //Creating hints by iterating through each car
         foreach (Vehicle vehicle in vehicles)
         {
             hints.AddRange(vehicle.CreateHints(hint));
         }
         
-        GameObject.Destroy(hint.gameObject);
+        Destroy(hint.gameObject);
     }
     
     public void RemoveHints()

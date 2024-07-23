@@ -1,21 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using EPOOutline;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class HintComponent : MonoBehaviour, IInteractable
 {
-    [field: SerializeField]
-    public int ItemId { get; set; }
-    [field: SerializeField]
-    private int NodeKey { get; set; }
+    //Needed For Car To Identify If Hint Should Be Created For The Item
+    [field: SerializeField]  public int ItemId { get; set; }
+    //Node To Which Detail Will Be Installed On Interaction With This Hint
+    [field: SerializeField] protected int NodeKey { get; set; }
     
     [SerializeField]
-    private Vehicle vehicle;
+    protected Vehicle vehicle;
     
     [SerializeField]
-    private Outlinable outline;
+    protected Outlinable outline;
+    
+    //Setting Outlinable Parameters For Hint
     private static Outlinable.OutlineProperties hintDefaultOutline;
     private static Outlinable.OutlineProperties hintHoverOutline;
 
@@ -24,10 +23,14 @@ public class HintComponent : MonoBehaviour, IInteractable
         hintDefaultOutline = defaultOutl;
         hintHoverOutline = hoverOutl;
     }
-    public void Interact(PlayerInteract player)
+    
+    public virtual void Interact(PlayerInteract player)
     {
+        //Getting Detail From Player Hand
         ChildDetail detail = player.InHandItem.GetComponent<ChildDetail>();
         player.Drop();
+        
+        //Pass Detail Reference To A Vehicle To Install It
         vehicle.InstallDetail(detail, NodeKey);
     }
 
@@ -38,7 +41,8 @@ public class HintComponent : MonoBehaviour, IInteractable
         else
             outline.SetOutlineParameters(hintDefaultOutline);
     }
-
+    
+    //Setting Parameters And Fields To Place Hint On Vehicle
     public void SetFields(int itemId, Outlinable outl)
     {
         ItemId = itemId;
@@ -58,7 +62,8 @@ public class HintComponent : MonoBehaviour, IInteractable
         
         Highlight(false);
     }
-
+    
+    
     public void SetVehicleAndNode(Vehicle vhcl, int nodeKey)
     {
         vehicle = vhcl;

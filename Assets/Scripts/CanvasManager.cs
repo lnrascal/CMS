@@ -8,7 +8,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] private GameObject defaultUI;
     
     [SerializeField] private CharacterActor characterActor;
-    [SerializeField] private GameObject camera;
+    [SerializeField] private GameObject playerCamera;
     private bool isOpen = false;
     
     public void OpenInventory(bool toOpen)
@@ -21,7 +21,7 @@ public class CanvasManager : MonoBehaviour
         defaultUI.gameObject.SetActive(!toOpen);
 
         characterActor.enabled = !toOpen;
-        camera.SetActive(!toOpen);
+        playerCamera.SetActive(!toOpen);
     }
 
     private void Update()

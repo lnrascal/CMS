@@ -7,7 +7,7 @@ using DG.Tweening;
 public class CarLift : MonoBehaviour, IInteractable
 {
     [SerializeField] private Outlinable outlinable;
-
+    
     [SerializeField] private Transform movingPlatform;
     [SerializeField] private float minHeight;
     [SerializeField] private float maxHeight;
@@ -16,10 +16,12 @@ public class CarLift : MonoBehaviour, IInteractable
     [SerializeField] private bool isMoving = false;
 
     public void Interact(PlayerInteract player)
-    {
+    {   
+        //Do nothing if CarLift is already active
         if (isMoving)
             return;
-
+        
+        //Type Of Movement Based On CarLift's State
         if (isLifted)
         {
             Down();
@@ -29,29 +31,32 @@ public class CarLift : MonoBehaviour, IInteractable
             Lift();
         }
     }
-
+    
     private void Lift()
     {
-        isMoving = true;
-        isLifted = true;
+        SetConditionFlags(true, true);
+        MovePlatform(maxHeight);
+    }
+    
+    private void Down()
+    {
+        SetConditionFlags(true, false);
+        MovePlatform(minHeight);
+    }
 
-        Tweener tween = movingPlatform.DOLocalMoveY(maxHeight, 2f);
+    private void MovePlatform(float endValue)
+    {
+        Tweener tween = movingPlatform.DOLocalMoveY(endValue, 2f);
         tween.Play().OnComplete(() =>
         {
             isMoving = false;
         });
     }
 
-    private void Down()
+    private void SetConditionFlags(bool movement, bool lifted)
     {
-        isMoving = true;
-        isLifted = false;
-        
-        Tweener tween = movingPlatform.DOLocalMoveY(minHeight, 2f);
-        tween.Play().OnComplete(() =>
-        {
-            isMoving = false;
-        });
+        isMoving = movement;
+        isLifted = lifted;
     }
 
     public void Highlight(bool toHighlight)

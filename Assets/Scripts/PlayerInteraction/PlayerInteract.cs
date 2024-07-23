@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    [Header("Cameras")] [SerializeField] private Camera characterCamera;
+    [Header("Cameras")] 
+    [SerializeField] private Camera characterCamera;
 
     [SerializeField] private Camera itemCamera;
 
@@ -16,7 +13,6 @@ public class PlayerInteract : MonoBehaviour
     private IInteractable targetInteractable;
 
     [SerializeField] private GameObject targetComponent;
-
     [SerializeField] private LayerMask hitLayers;
 
     [Header("Object Pickup")]
@@ -24,24 +20,22 @@ public class PlayerInteract : MonoBehaviour
 
     public GameObject InHandItem;
     
-
-    void Awake()
-    {
-    }
-
+    
+    //Ray Variables For Raycast
     private Vector3 rayPosition;
     private Quaternion rayRotation;
 
     private Vector3 rayDirection;
-    RaycastHit hit;
+    private RaycastHit hit;
     private GameObject newtarget;
 
     void Update()
     {
+        //Setting Raycast Variables
         rayPosition = characterCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
         rayRotation = characterCamera.transform.rotation;
         rayDirection = rayRotation * Vector3.forward;
-
+        
         if (Physics.Raycast(rayPosition, rayDirection, out hit, 3f, hitLayers))
         {
             //if target is the same do nothing
@@ -104,7 +98,6 @@ public class PlayerInteract : MonoBehaviour
 
         
         itemCamera.enabled = false;
-        
         InHandItem.GetComponent<IInteractable>().Drop();
         InHandItem = null;
     }
